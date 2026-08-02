@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  h1, h2, .font-serif-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-cursive {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+/* Custom Glassmorphism & Effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    0 20px 50px rgba(236, 72, 153, 0.15),
+    0 10px 25px rgba(168, 85, 247, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.glass-input:focus-within {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(244, 114, 182, 0.8);
+  box-shadow: 
+    0 0 0 4px rgba(244, 114, 182, 0.25),
+    0 4px 15px rgba(236, 72, 153, 0.15);
+}
+
+/* Animated Gradient Background */
+@keyframes gradientBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-bg {
+  background: linear-gradient(
+    -45deg,
+    #fce7f3,
+    #f3e8ff,
+    #e0f2fe,
+    #fdf2f8,
+    #fae8ff,
+    #f0f9ff
+  );
+  background-size: 400% 400%;
+  animation: gradientBg 18s ease infinite;
+}
+
+.animated-gradient-bg-bright {
+  background: linear-gradient(
+    -45deg,
+    #fbcfe8,
+    #e9d5ff,
+    #bae6fd,
+    #fce7f3,
+    #f5d0fe
+  );
+  background-size: 300% 300%;
+  animation: gradientBg 12s ease infinite;
+}
+
+/* Pulse Glow & Shimmer */
+@keyframes softShimmer {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.animate-soft-shimmer {
+  animation: softShimmer 4s ease-in-out infinite;
+}
+
+/* Float Animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+/* Butterfly Flutter */
+@keyframes flutterWing {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.2);
+  }
+}
+
+.butterfly-wing {
+  animation: flutterWing 0.25s ease-in-out infinite alternate;
+}
+
+/* Custom Woven Friendship Bracelet Texture & Realistic Handcrafted Styles */
+.woven-band-texture {
+  background-image: 
+    linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.25) 75%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.25) 75%);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+}
+
+.realistic-woven-bracelet {
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.22) 0px, rgba(255, 255, 255, 0.22) 3px, transparent 3px, transparent 7px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.15) 0px, rgba(0, 0, 0, 0.15) 3px, transparent 3px, transparent 7px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 35%, rgba(0, 0, 0, 0.3) 100%);
+  border-top: 2px dashed rgba(255, 255, 255, 0.85);
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.85);
+  box-shadow: 
+    inset 0 3px 6px rgba(255, 255, 255, 0.45),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.4),
+    0 12px 28px -6px rgba(0, 0, 0, 0.35);
+}
+
+.pure-embroidery-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.14em;
+  text-shadow: 
+    0px 1px 2px rgba(0, 0, 0, 0.7),
+    0px -1px 1px rgba(255, 255, 255, 0.9),
+    1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stitched-border {
+  border: 2px dashed rgba(255, 255, 255, 0.85);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.embroidery-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: 0.1em;
+  text-shadow: 
+    1px 1px 0px rgba(0, 0, 0, 0.3),
+    -1px -1px 0px rgba(255, 255, 255, 0.4),
+    0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.glowing-callout {
+  text-shadow: 
+    0 0 8px rgba(236, 72, 153, 0.6),
+    0 0 16px rgba(168, 85, 247, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(244, 114, 182, 0.4);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(236, 72, 153, 0.6);
+}
+

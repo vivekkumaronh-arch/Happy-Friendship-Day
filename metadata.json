@@ -1,0 +1,6 @@
+{
+  "name": "Friendship Day Digital Gift",
+  "description": "An enchanting, personalized digital gift experience for Friendship Day with falling flower petals, sparkles, glassmorphism UI, and personalized interactive celebrations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
